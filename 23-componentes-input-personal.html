@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    
+</head>
+<body>
+
+<section class="section">
+    <div class="container">
+        <p>Usando el bidireccional para los inputs con componentes</p>
+        <main>
+            <h3 class="is-size-5">Formulario</h3>
+            Email de contacto:
+            <!-- <input type="email" v-model="emailcontacto" placeholder="contacto" /> -->
+            <contacto v-model="emailcontacto"></contacto>
+            <h3 class="is-size-5">Datos</h3>
+            <pre>{{ $data }}</pre>
+        </main>
+    </div>
+</section>
+
+<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer></script>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+<script src="23-main.js"></script>
+
+</body>
+</html>

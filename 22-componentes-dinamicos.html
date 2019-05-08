@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    
+</head>
+<body>
+
+<section class="section">
+    <div class="container">
+        <p>Usar componentes dinamicos para cargarlos por variable</p>
+        <main>
+            <!--<h4 class="is-size-4">Twitter Card</h4>
+            <twitter-card></twitter-card>
+            <h4 class="is-size-4">Contacto</h4>
+            <contacto></contacto>
+            <h4 class="is-size-4">Botones</h4>
+            <botones></botones>  -->
+            
+            <div class="buttons has-addons is-centered">
+              <span @click="actualTab = 'contacto'" class="button">Contacto</span>
+              <span @click="actualTab = 'twitter-card'" class="button">Twitter</span>
+              <span @click="actualTab = 'botones'" class="button">Botones</span>
+            </div>
+            
+            
+            <component v-bind:is="actualTab"></component>
+            
+        </main>
+    </div>
+</section>
+
+<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer></script>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+<script src="22-main.js"></script>
+
+</body>
+</html>

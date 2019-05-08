@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <main>
+        <h1>Mostrar usuarios:</h1>
+        <mis-usuarios :datos="datapadre" inline-template>
+            <div>
+                <ul>
+                    <li v-for="u in datos">{{u.name}}</li>
+                <ul> 
+            </div> 
+        </mis-usuarios>
+    </main>
+    
+    <!--<template id="plantilla-usuarios">
+        <div>
+            <ul>
+                <li v-for="u in datos">{{u.name}}</li>
+            <ul> 
+            
+        </div>
+    </template> -->
+    
+    
+    <!-- Con script :( -->
+    <!--<script type="text/template" id="plantilla-usuarios">
+        <div>
+           <ul>
+                <li v-for="u in datos">{{u.name}}</li>
+            <ul> 
+        </div>
+    </script> -->
+   
+    <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="14-main.js"></script>
+</body>
+
+</html>

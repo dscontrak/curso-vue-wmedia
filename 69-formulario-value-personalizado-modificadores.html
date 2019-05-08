@@ -1,0 +1,94 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    
+</head>
+<body>
+
+<section class="section" id="app">
+    <div class="container">
+        <h1 class="is-size-1">Formulario</h1>
+        <hr>
+        <form @submit.prevent="enviar()">
+            
+            
+            <div class="field">
+              <div class="control">
+                <label class="label">¿Una opción?</label>
+                <label class="radio">
+                  <input type="radio" value="si" v-model="unaopcion" :value="[1, 2, 3, 4, 5]">
+                  Si
+                </label>
+                <label class="radio">
+                  <input type="radio" value="no" v-model="unaopcion" :value="[6, 7, 8, 9]">
+                  No
+                </label>
+              </div>
+            </div>
+            
+            
+            
+            <div class="field">
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox" v-model="checar" :true-value="a" :false-value="b">
+                  Checar
+                </label>
+              </div>
+            </div>
+            
+             <div class="field">
+              <label class="label">¿Varias opciones?</label>
+              <div class="control">
+                <div class="select">
+                  <select v-model="multiple">
+                    <option value="">Selecciona</option>
+                    <option :value="a">X</option>
+                    <option :value="b">Opciones</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="label">Retardo</label>
+              <div class="control">
+                <input required class="input" type="text" placeholder="Apellidos" v-model.lazy="retardo">
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="label">Trimeado</label>
+              <div class="control">
+                <input required class="input" type="text" placeholder="Apellidos" v-model.trim="trimeado">
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="label">Numerico</label>
+              <div class="control">
+                <input required class="input" type="number" placeholder="Apellidos" v-model.number="numerico">
+              </div>
+            </div>
+            
+        </form>
+        <pre>{{$data}}</pre>
+    </div>
+</section>
+
+
+
+<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer></script>
+
+<script src="69-main.js"></script>
+
+</body>
+</html>

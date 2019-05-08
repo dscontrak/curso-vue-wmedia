@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    
+</head>
+<body>
+
+<section class="section">
+    <div class="container">
+        <main>
+            <h1 class="is-size-3">Datos compartidos </h1>
+            <p>Para no usar eventos como <code>$emit.('X')</code> y los este escuchando hacia arriba, usamos mejor esto de la 
+            variable compartida.</p>
+            <div id="app1"><h1>{{ usuario.nombre }}</h1></div>
+            <div id="app2"><h1>{{ usuario.nombre }}</h1></div>
+        </main>
+    </div>
+</section>
+
+
+
+<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer></script>
+
+<script src="31-main.js"></script>
+
+</body>
+</html>

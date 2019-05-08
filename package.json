@@ -1,0 +1,8 @@
+{
+  "name": "WmediaVue",
+  "version": "1.0.0",
+  "description": "Para las practicas con Vue CLI y Webpack",
+  "main": "index.js",
+  "author": "Daniel Serna",
+  "license": "MIT"
+}

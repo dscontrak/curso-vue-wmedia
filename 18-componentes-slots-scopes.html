@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    
+</head>
+<body>
+
+<section class="section">
+    <div class="container">
+    <main>
+        <h1 class="is-size-1">Scopes con templates y slots</h1>
+        <!-- 
+            1. Se asignan los datos directamente de usuarios al listado que es props
+            2. Se va el template a utilizar los datos
+            3. Regresar a <xusuario> a renderizar lo del slot
+            4. Se sutituye los datos pasados como props del scope y definido con la variable temporal
+        -->
+        <xusuario :listado="usuarios">
+            <template slot="user-slot" scope="tempdata">
+                <li>{{tempdata.namex}}</li>
+            </template> 
+        </xusuario>
+        <xusuario :listado="usuarios">
+            <template slot="user-slot" scope="tempdata">
+                <li><strong>{{tempdata.namex}}</strong></li>
+            </template> 
+        </xusuario>
+        <xusuario :listado="usuarios">
+            <template slot="user-slot" scope="tempdata">
+                <li><i>{{tempdata.namex}}</i></li>
+            </template> 
+        </xusuario>
+        
+    </main>
+</div>
+
+
+
+<!--<slot name="tarea" v-for="tarea in listado" :title="tarea.nombre"></slot> -->
+<!--<li v-for="t in listado">{{t.nombre}}</li> -->
+<template id="plantilla-usuario">
+    <ul>
+        <slot name="user-slot" v-for="user in listado" :namex="user.nombre"></slot>
+    </ul>
+</template>
+
+</section>
+<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script src="18-main.js"></script>
+</body>
+</html>
